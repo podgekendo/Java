@@ -1,10 +1,7 @@
 Introduction to Java Programming
-
 Assignment  (10%)
 
-
-
-Q1.java, Q2.java, etc.), compile and run it from eclipse.
+A selection of different java programs. 1 that converts letters from upper to lower case, a hangman game and a BlackJack game.
 
 Q1. The international standard letter/number mapping found on the telephone is:
 Write a method that returns a number, given an uppercase letter, as follows:
@@ -13,11 +10,14 @@ The input number may contain letters. The program translates a letter (upper- or
 lower- case) to a digit and leaves all other characters intact. Here is a sample run 
 of the program:
 (10 Marks)
+
 Q2. Write a method that returns a sorted string using the following header: 
 For example, sort("acb") returns abc. Write a test program that prompts the user to 
 enter a string and displays the sorted string.
 (10 Marks)
-Q3. Write a hangman game that randomly generates a word and prompts the user to 
+
+Q3. Write a hangman game:
+That randomly generates a word and prompts the user to 
 guess one letter at a time, as shown in the sample run. Each letter in the word is 
 displayed as an asterisk. When the user makes a correct guess, the actual letter is 
 then displayed. When the user finishes a word, display the number of misses and 
@@ -26,7 +26,8 @@ store words, as follows:
 Sample execution of the program:
 (10 Marks)
 
-Blackjack Game
+*Blackjack Game:
+
 (Sample game accessible at http://scanlon.ucd.ie/blackjack/)
 Premise of the Game
 The basic premise of the game is that you want to have a hand value that is closer 
@@ -62,8 +63,10 @@ draw cards until the hand's value is 17 or more. For example, (Ace,5,7) is only 
 so he hits again. (Ace,5,7,5) makes 18 so he would stop ("stand") at that point.
 (i) Modify the DeckOfCards class found on Moodle to include the following 
 methods:
+
 /* Returns an integer representing a card in the deck.
 * Between shuffles, the same card will never be returned twice */
+
  public static int drawCard()
  (5 Marks)
  /* Shuffle the "deck" of ints */
@@ -71,17 +74,21 @@ methods:
 (5 Marks)
 (ii) Create a Blackjack class to handle the logic of the game. At a minimum this 
 class will require the following methods:
+
 /* Set up the game: perform a shuffle, "deal" 2 cards to both the 
 dealer & player */
 public static void setupNewGame()
 (5 Marks)
+
 /* Deal another card to the player */
 public static void hit()
 (5 Marks)
+
 /* Print the hand supplied as an int array to the console, e.g.:
 * 7 of Spades, Ace of Hearts, 3 of Diamonds
 * King of Clubs, 10 of Hearts
 * */
+
 public static void printHand(int[] hand, boolean isPlayer)
 (5 Marks) /* Expects an int array representing a blackjack hand as a 
 parameter.
@@ -91,12 +98,13 @@ parameter.
  
  /* Automates the dealer's play after the player stands. Dealer 
 draws a new card until he has 17 or greater */
+
  public static void finishDealersPlay()
 (5 Marks)
+
 /* Returns 1 if the player has won, -1 if the player
  * has lost and 0 if it's a draw/push (both the player
  * and the dealer have the same score)
- * 
  * 
  * A player has won if:
  * 1. His/her hand is <= 21 and his/her hand has a 
@@ -108,7 +116,7 @@ draws a new card until he has 17 or greater */
  * has a blackjack)
  * 
  * Otherwise the dealer has won.
- * */
+ *
  public static int calculateWinnings()
 (10 Marks)
 (iii) Create a TestBlackjack class that facilitates playing the game on the 
